@@ -158,18 +158,17 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(arr, string){
-    let deletedArr =[];
+    // let deletedArr =[];
   for(let i = 0; i < arr.length; i++){
-    if(arr[i].includes(string)){
-        // deletedArr = arr.splice(i,1).concat(deletedArr);
-        deletedArr.push(arr.splice([i],1));
+    if(arr[i] === string){
+        arr.splice(i,1);
     }
   }
   return arr;
     
 }
-console.log(removeFlavorByName(originalFlavors,'Vanilla'));
-console.log(originalFlavors);
+console.log(removeFlavorByName(originalFlavors, 'Banana'));
+
 
 
 
